@@ -150,7 +150,6 @@ d=1;
 angle_degree_surround=angle_degree_target;
 spacing_surround=spacing_target;
 Surroundlevel_dB=NaN; 
-phi_start_surround=phi_start1_target_v;
 
 nb_noises_n=1;
 plot_01=1;
@@ -167,6 +166,8 @@ coef_smoothing_noise=1;
 % noise first, because it may take some time
 [coef_noise1_generated_m, scale_rate_values1_m, level_noise1_generated_m, phi_noise1_generated_m, phi_start1_target_v]= fct_toolbox_generateCoefMatrix_ORIENTnoise_final(fmin, fmax, fs, duration_sound, ntones, f0, d, spacing_target,phi_start_list_v, angle_degree_target,nb_angles, sd_noise_dB, nb_noises_n);
 [coef_noise2_generated_m, scale_rate_values2_m, level_noise2_generated_m, phi_noise2_generated_m, phi_start2_target_v]= fct_toolbox_generateCoefMatrix_ORIENTnoise_final(fmin, fmax, fs, duration_sound, ntones, f0, d, spacing_nontarget,phi_start_list_v, angle_degree_nontarget,nb_angles , sd_noise_dB, nb_noises_n);
+
+phi_start_surround=phi_start1_target_v;
 
 
 % Create the sounds and play
